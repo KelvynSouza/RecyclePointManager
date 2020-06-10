@@ -1,0 +1,70 @@
+#page-search-results {
+  width: 90%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  /*As vezes as margens colapsam, formando estranhos 
+  espaços entre elementos não definidos anteriormente,
+  um exemplo é as margens dos elementos de dentro
+  não respeitarem o body. A tag Overflow corrige esse erro,
+  fazendo com que o conteudo em excesso se comporte,
+  para pesquisas futuras, o nome do erro é margin collapse
+   */
+  overflow: auto;
+}
+
+#page-search-results header {
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-search-results header a {
+  color: var(--title-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;  
+}
+
+#page-search-results header a span {
+  background-image: url("../assets/arrow-left.svg");
+  width: 20px;
+  height: 24px;
+  display: flex;
+  margin-right: 16px;
+}
+
+main {
+    margin-top: 48px;
+}
+
+main h4{
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+
+    margin-bottom: 32px;
+}
+
+main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 24px;
+}
+
+main .card img{
+    width: 100%;
+    height: 150px;
+
+    border-radius: 8px 8px 0 0;
+}
+
+main .card h1{
+margin: 32px 0 24px;
+
+font-size: 36px;
+line-height: 41px;
+
+color:#322153;
+}
