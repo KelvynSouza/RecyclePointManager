@@ -1,4 +1,9 @@
 body::after{
+  /*
+  Para deixar o fundo absoluto, ao rolar para baixo, 
+  background não fixa atras
+  position:absolute;
+  */
   content: "";
   position: fixed;
   background: white;

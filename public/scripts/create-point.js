@@ -37,8 +37,6 @@ function getCities(event) {
 
 document.querySelector("select[name=uf]").addEventListener("change", getCities);
 
-
-
 //Itens de coleta
 const itemsToCollect = document.querySelectorAll(".items-grid li");
 
@@ -46,7 +44,7 @@ for (let item of itemsToCollect) {
   item.addEventListener("click", handleSelectedItem);
 }
 
-const colectedItems = document.querySelector("input[name=items]")
+const colectedItems = document.querySelector("input[name=items]");
 let selecteditems = [];
 
 //Função criada para manusear os items de coleta selecionados ou não
@@ -58,18 +56,18 @@ function handleSelectedItem(event) {
 
   const itemId = itemsLi.dataset.id;
 
-  const alreadySelected = selecteditems.findIndex(item => item == itemId)
+  const alreadySelected = selecteditems.findIndex((item) => item == itemId);
 
-  if(alreadySelected>=0){
-    const filteredItems = selecteditems.filter(item=>{
+  if (alreadySelected >= 0) {
+    const filteredItems = selecteditems.filter((item) => {
       const itemIsDifferent = item != itemId;
       return itemIsDifferent;
-    })
-    selecteditems = filteredItems
-  }else{
-    selecteditems.push(itemId)
+    });
+    selecteditems = filteredItems;
+  } else {
+    selecteditems.push(itemId);
   }
-  colectedItems.value = selecteditems
+  colectedItems.value = selecteditems;
 }
 
 //Exemplo
